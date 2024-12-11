@@ -102,7 +102,8 @@
     font-weight: bold;
 }
 .description{
-    max-width: 75%;
+    max-width: 85%;
+    text-align: justify;
     margin-bottom: 10px;
 }
 #btn-projects{
