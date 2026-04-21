@@ -1,87 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio EsthefanyDev</title>
-    <!-- CSS do Projeto -->
-    <link rel="stylesheet" href="CSS/styles.css">
-    <!-- Google fonts -->
+    <title>EsthefanyDev | Software Developer Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Dev Icons Fonts --> 
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />      
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicon (Technology Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main id="container">
-    <aside id="bio-container">
-        <h2>EsthefanyDev</h2>
-        <img id="bio-image" src="./img/minha foto.jpg" alt="Esthefany">
-        <p>Olá, meu nome é Esthefany e sou <span class="highlight">desenvolvedora FullStack</span></p>
-        <p id="welcome-text">Seja bem-vindo!</p>
-        <ul id="social-container">
-            <li><a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li><a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-        </ul>
-        <div id="email-container">
-            <ion-icon name="mail-outline"></ion-icon><a href="mailto:esthefany.dev23@gmail.com">esthefany.Dev23@gmail.com</a>
-        </div>
-    </aside>
-    <section id="about-container">
-        <h1 id="name">EsthefanyDev</h1>
-        <p id="title"><span class="highlight">Desenvolvedora FullStack</span></p>
-        <p class="description">Atualmente, sou uma desenvolvedora full-stack em formação em Análise e Desenvolvimento de Sistemas, com foco em todas as etapas do desenvolvimento de projetos, desde a <span class="highlight">definição de requisitos</span> até o <span class="highlight">deploy da aplicação</span>.</p> 
-        <br>
-        <p class="description">Tenho experiência prática em <span class="highlight">front-end</span> e <span class="highlight">back-end</span>, e estou sempre me aprofundando em tecnologias como <span class="highlight">JavaScript, PHP, Python, MySQL</span>, para criar soluções eficientes e que atendam às necessidades dos usuários.</p>
-        <a href="https://github.com/EsthefanyDev" id="btn-projects"><ion-icon name="share-social-outline"></ion-icon> <span>Ver Projetos</span></a>
-        <h2 id="skills-section-title">Minhas Skills</h2>
-        <p class="description">Conheça as tecnologias que domino:</p>
-        <div id="skills-container">
-            <div class="skills-box">
-                <p class="skills-title">Front-end</p>
-                <i class="devicon-html5-plain colored"></i>
-                <i class="devicon-css3-plain colored"></i>
-                <i class="devicon-javascript-plain colored"></i>
-            </div>
-            <div class="skills-box">
-                <p class="skills-title">Back-end</p>
-                <i class="devicon-php-plain colored"></i>
-                <!-- <i class="devicon-nodejs-plain colored"></i> -->
-                <i class="devicon-python-plain colored"></i>
-            </div>
-            <div class="skills-box">
-                <p class="skills-title">Databases</p>
-                <i class="devicon-mysql-plain colored"></i>
-                <i class="devicon-postgresql-plain colored"></i>
-            </div>
-            <div class="skills-box">
-                <p class="skills-title">Front-end Frameworks</p>
-                <!-- <i class="devicon-vscode-plain colored"></i> -->
-                <i class="devicon-sass-plain colored"></i>
-                <!-- <i class="devicon-vuejs-plain colored"></i> -->
-                <i class="devicon-bootstrap-plain colored"></i>
-            </div>
-            <div class="skills-box">
-                <p class="skills-title">Back-end Frameworks</p>
-                <i class="devicon-django-plain colored"></i>
-                <i class="devicon-laravel-plain colored"></i>
-            </div>
-            <div class="skills-box">
-                <p class="skills-title">Tools</p>
-                <i class="devicon-wordpress-plain colored"></i>
-                <i class="devicon-git-plain colored"></i>
-                <i class="devicon-jquery-plain colored"></i> 
-                <i class="devicon-ionic-original colored"></i>
-            </div>
-        </div>
-    </section>
-  </main>
+    <!-- Custom Cursor (Optional but Premium) -->
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
 
+    <!-- Header / Navbar -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-text">Esthefany<span>Dev</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="nav-extra">
+                <a href="#contact" class="btn btn-primary small">Contate-me</a>
+                <button class="mobile-menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Ion-Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <span class="badge">Disponível para novos projetos</span>
+                    <h1 class="hero-title">
+                        Transformando ideias em <span class="gradient-text">Realidade Digital.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Olá, eu sou <strong>Esthefany</strong>. Sou uma Desenvolvedora apaixonada por interfaces
+                        modernas, código limpo e soluções inovadoras que impactam positivamente a vida das pessoas.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#about" class="btn btn-outline">Saiba Mais</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/esthefanyxavier23" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/EsthefanyDev" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-aos="fade-left">
+                    <div class="blob-wrapper">
+                        <div class="blob"></div>
+                        <img src="assets/avatar.png" alt="Esthefany" class="avatar">
+                    </div>
+                    <div class="floating-card c1">
+                        <i class="fas fa-code"></i>
+                        <span>Clean Code</span>
+                    </div>
+                    <div class="floating-card c2">
+                        <i class="fas fa-rocket"></i>
+                        <span>Performance</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down">
+                <div class="mouse"></div>
+                <span>Role para baixo</span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section dark-bg">
+            <div class="container section-padding">
+                <div class="section-header center" data-aos="fade-up">
+                    <span class="subtitle">Minha Jornada</span>
+                    <h2 class="section-title">Quem é Esthefany?</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-info" data-aos="fade-right">
+                        <h3>Focada em inovação e design excepcional</h3>
+                        <p>
+                            Minha jornada na tecnologia começou com uma curiosidade insaciável sobre como as coisas
+                            funcionam na web. Hoje, foco em criar aplicações que não apenas funcionam perfeitamente, mas
+                            também encantam visualmente.
+                        </p>
+                        <p>
+                            Acredito que o design e a performance devem caminhar juntos. Cada linha de código que
+                            escrevo é pensada para proporcionar a melhor experiência possível ao usuário final.
+                        </p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-num">2+</span>
+                                <span class="stat-label">Anos de Exp.</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">20+</span>
+                                <span class="stat-label">Projetos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-cards" data-aos="fade-left">
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                            <h4>Frontend Developer</h4>
+                            <p>Especialista em construir interfaces modernas e responsivas.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                            <h4>Design Responsivo</h4>
+                            <p>Sites que se adaptam perfeitamente a todos os dispositivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header center" data-aos="fade-up">
+                    <span class="subtitle">Expertise</span>
+                    <h2 class="section-title">Minhas Tecnologias</h2>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skills-track">
+                    <!-- First Set -->
+                    <div class="skill-item">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-php-plain colored"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <!-- Duplicate Set for literal infinite loop -->
+                    <div class="skill-item">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-php-plain colored"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section dark-bg">
+            <div class="container section-padding">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="subtitle">Trabalhos Recentes</span>
+                    <h2 class="section-title">Destaques</h2>
+                    <div class="projects-grid">
+                        <!-- Project 1: ObraControl -->
+                        <div class="project-card" data-aos="fade-up">
+                            <div class="project-img">
+                                <img src="assets/obracontrol.png" alt="ObraControl">
+                                <div class="project-overlay">
+                                    <button class="view-btn open-project" data-project="obracontrol"><i class="fas fa-plus"></i></button>
+                                    <a href="https://obracontrol-sistema.vercel.app/" target="_blank"
+                                        class="view-btn"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="category">SaaS / Construção civil</span>
+                                <h3>ObraControl</h3>
+                                <p>Sistema para gestão de obras, controle de diaristas e acompanhamento financeiro em
+                                    tempo real.</p>
+                                <div class="tags">
+                                    <span>Supabase</span>
+                                    <span>Chart.js</span>
+                                    <span>PWA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2: PalletLog -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-img">
+                                <img src="assets/palletlog.png" alt="PalletLog">
+                                <div class="project-overlay">
+                                    <button class="view-btn open-project" data-project="palletlog"><i class="fas fa-plus"></i></button>
+                                    <a href="https://palletlog.vercel.app/" target="_blank" class="view-btn"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="category">Indústria / E-commerce</span>
+                                <h3>PalletLog</h3>
+                                <p>Catálogo industrial com sistema de orçamento via WhatsApp, carrinho persistente e cálculo de itens em tempo real.</p>
+                                <div class="tags">
+                                    <span>JavaScript</span>
+                                    <span>LocalStorage</span>
+                                    <span>WhatsApp API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container section-padding">
+                <div class="contact-grid">
+                    <div class="contact-info" data-aos="fade-right">
+                        <span class="subtitle">Vamos Conversar</span>
+                        <h2 class="section-title">Tem um projeto em mente?</h2>
+                        <p>Estou sempre aberta a novas oportunidades e colaborações interessantes.</p>
+
+                        <ul class="contact-details">
+                            <li>
+                                <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <strong>E-mail</strong>
+                                    <p>contato@esthefany.dev</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <strong>Localização</strong>
+                                    <p>São Paulo, Brasil</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-form-container" data-aos="fade-left">
+                        <form id="contact-form" class="glass-card">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Seu Nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Seu E-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <span class="logo-text">Esthefany<span>Dev</span></span>
+                </div>
+                <div class="copy">
+                    &copy; 2026 EsthefanyDev. Todos os direitos reservados.
+                </div>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <span id="modal-category" class="category"></span>
+                    <div id="modal-desc" class="modal-text"></div>
+                    <div class="modal-features">
+                        <h3>Principais Funcionalidades:</h3>
+                        <ul id="modal-feature-list"></ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a id="modal-link" href="#" target="_blank" class="btn btn-primary">Visitar Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
+
 </html>
